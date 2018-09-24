@@ -1,5 +1,7 @@
 package com.hx.bean;
 
+import org.springframework.beans.factory.annotation.Value;
+
 /**
  * @author yxqiang
  * @create 2018-09-23 21:08
@@ -7,7 +9,14 @@ package com.hx.bean;
 
 
 public class Person {
+
+    //使用@Value赋值
+    //1. 基本类型的值
+    //2. 可以用SpEL表达式 #{20-2}
+    //3. 可以使用环境变量中的值 ${}
+    @Value("yxqiang888")
     public String name;
+    @Value("#{20-2}")
     public Integer age;
 
     public String getName() {

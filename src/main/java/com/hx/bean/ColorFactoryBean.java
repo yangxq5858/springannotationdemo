@@ -5,7 +5,7 @@ import org.springframework.beans.factory.FactoryBean;
 /**
  * @author yxqiang
  * @create 2018-09-24 17:03
- * 创建一个Spring定义的工厂Bean
+ * 鍒涘缓涓�涓猄pring瀹氫箟鐨勫伐鍘侭ean
  */
 public class ColorFactoryBean implements FactoryBean<Color> {
     public Color getObject() throws Exception {

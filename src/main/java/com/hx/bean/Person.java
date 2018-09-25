@@ -10,14 +10,17 @@ import org.springframework.beans.factory.annotation.Value;
 
 public class Person {
 
-    //Ê¹ÓÃ@Value¸³Öµ
-    //1. »ù±¾ÀàĞÍµÄÖµ
-    //2. ¿ÉÒÔÓÃSpEL±í´ïÊ½ #{20-2}
-    //3. ¿ÉÒÔÊ¹ÓÃ»·¾³±äÁ¿ÖĞµÄÖµ ${}
+    //ä½¿ç”¨@Valueèµ‹å€¼
+    //1. åŸºæœ¬ç±»å‹çš„å€¼
+    //2. å¯ä»¥ç”¨SpELè¡¨è¾¾å¼ #{20-2}
+    //3. å¯ä»¥ä½¿ç”¨ç¯å¢ƒå˜é‡ä¸­çš„å€¼ ${}
     @Value("yxqiang888")
-    public String name;
+    private String name;
     @Value("#{20-2}")
-    public Integer age;
+    private Integer age;
+
+    @Value("${person.nikeName}")
+    private String nickName;
 
     public String getName() {
         return name;
@@ -40,6 +43,14 @@ public class Person {
         this.age = age;
     }
 
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
     public Person() {
         super();
     }
@@ -49,6 +60,7 @@ public class Person {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", nickName='" + nickName + '\'' +
                 '}';
     }
 }

@@ -1,4 +1,7 @@
 import com.hx.Repository.BookDao;
+import com.hx.bean.Boss;
+import com.hx.bean.Car;
+import com.hx.bean.Color;
 import com.hx.config.AutoWiredConfig;
 import com.hx.config.PropertyAssignValueConfig;
 import com.hx.service.BookService;
@@ -22,6 +25,18 @@ public class IOCTest_AutoWired {
 
     }
 
+    @Test
+    public void Test2(){
+        Boss boss = applicationContext.getBean(Boss.class);
+        Car car = applicationContext.getBean(Car.class);
+        Color color = applicationContext.getBean(Color.class);
+        System.out.println(car);
+        System.out.println(boss);
+        System.out.println(color);
+
+    }
+
+
     //打印容器中所有的bean
     private void PrintNames(AnnotationConfigApplicationContext applicationContext) {
         String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
@@ -29,4 +44,6 @@ public class IOCTest_AutoWired {
             System.out.println(beanDefinitionName);
         }
     }
+
+
 }

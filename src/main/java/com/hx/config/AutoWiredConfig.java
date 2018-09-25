@@ -1,6 +1,8 @@
 package com.hx.config;
 
 import com.hx.Repository.BookDao;
+import com.hx.bean.Car;
+import com.hx.bean.Color;
 import com.hx.controller.BookController;
 import com.hx.service.BookService;
 import org.springframework.context.annotation.*;
@@ -22,7 +24,7 @@ import org.springframework.context.annotation.*;
  */
 
 @Configuration
-@ComponentScan({"com.hx.controller","com.hx.service","com.hx.Repository"})
+@ComponentScan({"com.hx.controller","com.hx.service","com.hx.Repository","com.hx.bean"})
 //@Import(value = {BookController.class, BookService.class, BookDao.class})
 
 public class AutoWiredConfig {
@@ -34,5 +36,12 @@ public class AutoWiredConfig {
         BookDao bookDao = new BookDao();
         bookDao.setLabel("2");
         return bookDao;
+    }
+
+    @Bean
+    public Color color(Car car){ //这里使用了参数的自动装配，@Autowired 是省略了的
+        Color color = new Color();
+        color.setCar(car);
+        return color;
     }
 }

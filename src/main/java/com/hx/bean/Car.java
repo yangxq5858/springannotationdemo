@@ -1,9 +1,13 @@
 package com.hx.bean;
 
+import org.springframework.stereotype.Component;
+
 /**
  * @author yxqiang
  * @create 2018-09-24 17:50
  */
+
+@Component
 public class Car {
 
 

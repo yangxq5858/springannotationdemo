@@ -14,22 +14,22 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 public class WindowsCondition implements Condition {
 
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
-        //1.ÄÜ»ñÈ¡µ½beanµÄ×°Åä¹¤³§
+        //1.èƒ½è·å–åˆ°beançš„è£…é…å·¥å‚
         ConfigurableListableBeanFactory beanFactory = context.getBeanFactory();
 
-        //2.ÄÜ»ñÈ¡µ½Àà¼ÓÔØÆ÷
+        //2.èƒ½è·å–åˆ°ç±»åŠ è½½å™¨
         ClassLoader classLoader = context.getClassLoader();
 
-        //3.ÄÜ»ñÈ¡µ½µ±Ç°µÄ»·¾³±äÁ¿
+        //3.èƒ½è·å–åˆ°å½“å‰çš„ç¯å¢ƒå˜é‡
         Environment environment = context.getEnvironment();
 
-        //4.ÄÜ»ñÈ¡µ½bean¶¨ÒåµÄ×¢²áÀà£¨¿ÉÒÔ×¢²áºÍÒÆ³ı×é¼şµÈ£©
+        //4.èƒ½è·å–åˆ°beanå®šä¹‰çš„æ³¨å†Œç±»ï¼ˆå¯ä»¥æ³¨å†Œå’Œç§»é™¤ç»„ä»¶ç­‰ï¼‰
         BeanDefinitionRegistry beanDefinitionRegistry = context.getRegistry();
 
-        //¿ÉÒÔÅĞ¶ÏÈİÆ÷ÖĞbeanµÄ×¢²áÇé¿ö£¬Ò²¿ÉÒÔ¸øÈİÆ÷ÖĞ×¢²ábean
+        //å¯ä»¥åˆ¤æ–­å®¹å™¨ä¸­beançš„æ³¨å†Œæƒ…å†µï¼Œä¹Ÿå¯ä»¥ç»™å®¹å™¨ä¸­æ³¨å†Œbean
         boolean beanDefinition = beanDefinitionRegistry.containsBeanDefinition("person");
 
-        //ÎÒÃÇÕâÀïÖ»Ê¹ÓÃ»·¾³±äÁ¿
+        //æˆ‘ä»¬è¿™é‡Œåªä½¿ç”¨ç¯å¢ƒå˜é‡
         String property = environment.getProperty("os.name");
         if (property.contains("Windows")){
             return true;

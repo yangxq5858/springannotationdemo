@@ -1,4 +1,4 @@
-package com.hx.com.hx.Repository;
+package com.hx.Repository;
 
 import org.springframework.stereotype.Repository;
 

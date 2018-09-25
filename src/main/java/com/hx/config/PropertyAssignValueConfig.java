@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * @author yxqiang
  * @create 2018-09-24 21:24
  *
- * 给属性赋值的配置
+ * 缁欏睘鎬ц祴鍊肩殑閰嶇疆
  */
 
 @Configuration

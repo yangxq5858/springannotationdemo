@@ -15,11 +15,11 @@ public class IOCTest_PropertyValue {
         Object person = applicationContext.getBean("person");
         System.out.println(person);
 
-        applicationContext.close(); //关闭容器
+        applicationContext.close(); //鍏抽棴瀹瑰櫒
 
     }
 
-    //打印容器中所有的bean
+    //鎵撳嵃瀹瑰櫒涓墍鏈夌殑bean
     private void PrintNames(AnnotationConfigApplicationContext applicationContext) {
         String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
         for (String beanDefinitionName : beanDefinitionNames) {

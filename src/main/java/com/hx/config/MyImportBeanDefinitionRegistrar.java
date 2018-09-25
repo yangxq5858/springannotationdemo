@@ -16,8 +16,8 @@ import org.springframework.core.type.AnnotationMetadata;
 public class MyImportBeanDefinitionRegistrar implements ImportBeanDefinitionRegistrar {
     /**
      *
-     * @param importingClassMetadata 当前类的注解信息
-     * @param registry bean定义的注册类
+     * @param importingClassMetadata 褰撳墠绫荤殑娉ㄨВ淇℃伅
+     * @param registry bean瀹氫箟鐨勬敞鍐岀被
      */
     public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
 

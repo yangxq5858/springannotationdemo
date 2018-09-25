@@ -1,4 +1,4 @@
-package com.hx.com.hx.controller;
+package com.hx.controller;
 
 import org.springframework.stereotype.Controller;
 

@@ -15,7 +15,7 @@ public class IOCTest {
 
     AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
 
-    //1 ×î»ù±¾µÄÓÃ·¨
+    //1 æœ€åŸºæœ¬çš„ç”¨æ³•
     @Test
     public void test1() {
 
@@ -27,25 +27,25 @@ public class IOCTest {
         }
     }
 
-    //²âÊÔComponentScan °üÉ¨Ãè
+    //æµ‹è¯•ComponentScan åŒ…æ‰«æ
     @Test
     public void test2() {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(ComponentScanConfig.class);
         PrintNames(applicationContext);
     }
 
-    //²âÊÔÀàÉú³Éµ¥Àı£¿
+    //æµ‹è¯•ç±»ç”Ÿæˆå•ä¾‹ï¼Ÿ
     @Test
     public void test3() {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
-        System.out.println("IOC ÈİÆ÷´´½¨Íê³ÉÁË...");
+        System.out.println("IOC å®¹å™¨åˆ›å»ºå®Œæˆäº†...");
         Object person1 = applicationContext.getBean("person");
         Object person2 = applicationContext.getBean("person");
         System.out.println(person1 == person2);
 
     }
 
-    //²âÊÔÌõ¼ş×¢²á×é¼ş
+    //æµ‹è¯•æ¡ä»¶æ³¨å†Œç»„ä»¶
     @Test
     public void test4() {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(ConditionalConfig.class);
@@ -61,7 +61,7 @@ public class IOCTest {
 
     }
 
-    //²âÊÔ@ImportSelector µ¼ÈëµÚÈı·½°ü×é¼ş
+    //æµ‹è¯•@ImportSelector å¯¼å…¥ç¬¬ä¸‰æ–¹åŒ…ç»„ä»¶
     @Test
     public void test5() {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(ImportComponentConfig.class);
@@ -71,13 +71,13 @@ public class IOCTest {
         System.out.println(red == red1);
     }
 
-    //²âÊÔ
+    //æµ‹è¯•
     @Test
     public void test6(){
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
         PrintNames(applicationContext);
         Object colorFactoryBean = applicationContext.getBean("colorFactoryBean");
-        System.out.println("colorFactoryBeanµÄÀàĞÍ="+colorFactoryBean.getClass());
+        System.out.println("colorFactoryBeançš„ç±»å‹="+colorFactoryBean.getClass());
         Object bean = applicationContext.getBean("&colorFactoryBean");
         System.out.println(bean.getClass());
 

@@ -11,35 +11,35 @@ import org.springframework.context.annotation.Scope;
  * @author yxqiang
  * @create 2018-09-24 17:31
  *
- * Bean µÄÉúÃüÖÜÆÚ
- *   beanµÄ´´½¨ --> ³õÊ¼»¯ -->Ïú·Ï
+ * Bean çš„ç”Ÿå‘½å‘¨æœŸ
+ *   beançš„åˆ›å»º --> åˆå§‹åŒ– -->é”€åºŸ
  *
- *   ¶ÔÏó´´½¨£º
- *      µ¥ÊµÀı£ºÔÚÈİÆ÷³õÊ¼»¯Ê±£¬´´½¨
- *      ¶àÊµÀı£ºÔÚµÚÒ»´ÎÊ¹ÓÃÊ±£¬´´½¨
- *   ¶ÔÏó³õÊ¼»¯£º
- *      ¶ÔÏó´´½¨Íê³Éºó£¬²¢¸³Öµºó£¬µ÷ÓÃ³õÊ¼»¯·½·¨
- *   ¶ÔÏóÏú·Ï£º
- *      µ¥ÊµÀı£ºÈİÆ÷¹Ø±ÕÊ±£¬Ïú·Ï
- *      ¶àÊµÀı£ºÈİÆ÷²»¹ÜÄã£¬¼´²»Ïú·Ï
+ *   å¯¹è±¡åˆ›å»ºï¼š
+ *      å•å®ä¾‹ï¼šåœ¨å®¹å™¨åˆå§‹åŒ–æ—¶ï¼Œåˆ›å»º
+ *      å¤šå®ä¾‹ï¼šåœ¨ç¬¬ä¸€æ¬¡ä½¿ç”¨æ—¶ï¼Œåˆ›å»º
+ *   å¯¹è±¡åˆå§‹åŒ–ï¼š
+ *      å¯¹è±¡åˆ›å»ºå®Œæˆåï¼Œå¹¶èµ‹å€¼åï¼Œè°ƒç”¨åˆå§‹åŒ–æ–¹æ³•
+ *   å¯¹è±¡é”€åºŸï¼š
+ *      å•å®ä¾‹ï¼šå®¹å™¨å…³é—­æ—¶ï¼Œé”€åºŸ
+ *      å¤šå®ä¾‹ï¼šå®¹å™¨ä¸ç®¡ä½ ï¼Œå³ä¸é”€åºŸ
  *
- *   1) Í¨¹ı@BeanÖĞµÄ²ÎÊıÖ¸¶¨³õÊ¼»¯ºÍÏú·ÏµÄ·½·¨£¨init destory£©
- *   2) Í¨¹ıÈÃbean×é¼şÊµÏÖ³õÊ¼»¯ºÍÏú·ÏµÄ½Ó¿ÚÀ´ÊµÏÖ
- *      InitializingBean, DisposableBean Õâ2¸ö½Ó¿Ú
- *   3) Í¨¹ıjdkµÄJSR250 ×Ô´øµÄ×¢½â
- *      @PostConstruct ÔÚbean´´½¨Íê³É£¬²¢¸³Öµºó£¬½øĞĞ
- *      @PreDestory    ÔÚbeanÏú·ÏÖ®Ç°£¬½øĞĞÍ¨ÖªÇåÀí¹¤×÷
- *   4) Í¨¹ıÊµÏÖSpringµÄ½Ó¿ÚBeanPostProcessorµÄ2¸ö·½·¨
- *      postProcessBeforeInitialization: ÔÚbean´´½¨ºó£¬³õÊ¼»¯Ö®Ç°µ÷ÓÃ
- *      postProcessAfterInitialization:  ÔÚbean³õÊ¼»¯Ö®ºóµ÷ÓÃ
+ *   1) é€šè¿‡@Beanä¸­çš„å‚æ•°æŒ‡å®šåˆå§‹åŒ–å’Œé”€åºŸçš„æ–¹æ³•ï¼ˆinit destoryï¼‰
+ *   2) é€šè¿‡è®©beanç»„ä»¶å®ç°Springæä¾›çš„åˆå§‹åŒ–å’Œé”€åºŸçš„æ¥å£æ¥å®ç°
+ *      InitializingBean, DisposableBean è¿™2ä¸ªæ¥å£
+ *   3) é€šè¿‡jdkçš„JSR250 è‡ªå¸¦çš„æ³¨è§£
+ *      @PostConstruct åœ¨beanåˆ›å»ºå®Œæˆï¼Œå¹¶èµ‹å€¼åï¼Œè¿›è¡Œ
+ *      @PreDestory    åœ¨beané”€åºŸä¹‹å‰ï¼Œè¿›è¡Œé€šçŸ¥æ¸…ç†å·¥ä½œ
+ *   4) é€šè¿‡å®ç°Springçš„æ¥å£BeanPostProcessorçš„2ä¸ªæ–¹æ³•
+ *      postProcessBeforeInitialization: åœ¨beanåˆ›å»ºåï¼Œåˆå§‹åŒ–ä¹‹å‰è°ƒç”¨
+ *      postProcessAfterInitialization:  åœ¨beanåˆå§‹åŒ–ä¹‹åè°ƒç”¨
  *
- *      Ö´ĞĞË³Ğò½á¹û
+ *      æ‰§è¡Œé¡ºåºç»“æœ
  *      Car construct...
  *      postProcessBeforeInitialization car=>com.hx.bean.Car@15761df8
  *      Car init...
  *      postProcessAfterInitialization car=>com.hx.bean.Car@15761df8
- *   5) Spring¿ò¼ÜÖĞ£¬´óÁ¿Ê¹ÓÃÁËBeanPostProcessor
- *      ***ÎÒÃÇ¿ÉÒÔÊ¹ÓÃSpringÖĞÒÑ¾­ÊµÏÖÁËBeanPostProcessor½Ó¿Ú
+ *   5) Springæ¡†æ¶ä¸­ï¼Œå¤§é‡ä½¿ç”¨äº†BeanPostProcessor
+ *      ***æˆ‘ä»¬å¯ä»¥ä½¿ç”¨Springä¸­å·²ç»å®ç°äº†BeanPostProcessoræ¥å£
  *
  *
  */

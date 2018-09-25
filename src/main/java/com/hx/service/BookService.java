@@ -1,4 +1,4 @@
-package com.hx.com.hx.service;
+package com.hx.service;
 
 import org.springframework.stereotype.Service;
 

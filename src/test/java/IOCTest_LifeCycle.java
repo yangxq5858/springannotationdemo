@@ -11,13 +11,13 @@ public class IOCTest_LifeCycle {
     @Test
     public void Test1(){
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanLifeCycleConfig.class);
-        System.out.println("ÈİÆ÷´´½¨Íê³É...");
+        System.out.println("å®¹å™¨åˆ›å»ºå®Œæˆ...");
 
         Object car = applicationContext.getBean("car");
         Object computer = applicationContext.getBean("computer");
-        //Ïú·ÏÈİÆ÷
+        //é”€åºŸå®¹å™¨
         applicationContext.close();
-        System.out.println("ÈİÆ÷ÒÑ¾­¹Ø±Õ");
+        System.out.println("å®¹å™¨å·²ç»å…³é—­");
 
 
 

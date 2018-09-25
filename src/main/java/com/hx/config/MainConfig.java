@@ -18,16 +18,16 @@ public class MainConfig {
     /**
      * 	   ConfigurableBeanFactory#SCOPE_PROTOTYPE prototype
      * 	   ConfigurableBeanFactory#SCOPE_SINGLETON singleton
-     * 	   org.springframework.web.context.WebApplicationContext#SCOPE_REQUEST request ±íÊ¾Í¬Ò»¸öÇëÇóÒ»¸ö
-     * 	   org.springframework.web.context.WebApplicationContext#SCOPE_SESSION session ±íÊ¾Í¬Ò»¸öSessionÉú³ÉÒ»¸ö
+     * 	   org.springframework.web.context.WebApplicationContext#SCOPE_REQUEST request è¡¨ç¤ºåŒä¸€ä¸ªè¯·æ±‚ä¸€ä¸ª
+     * 	   org.springframework.web.context.WebApplicationContext#SCOPE_SESSION session è¡¨ç¤ºåŒä¸€ä¸ªSessionç”Ÿæˆä¸€ä¸ª
      */
 
 
     //@Scope(scopeName = "prototype")
     @Lazy
-    @Bean(name = "person")//ÖØĞÂ¶¨ÒåbeanµÄÃû×ÖÎªperson
+    @Bean(name = "person")//é‡æ–°å®šä¹‰beançš„åå­—ä¸ºperson
     public Person person1() {
-        System.out.println("IOCÈİÆ÷´´½¨ Person ¶ÔÏóÁË...");
+        System.out.println("IOCå®¹å™¨åˆ›å»º Person å¯¹è±¡äº†...");
         return new Person("lisi", 18);
     }
 

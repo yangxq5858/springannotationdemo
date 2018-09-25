@@ -11,13 +11,13 @@ import org.springframework.context.annotation.Configuration;
  * @author yxqiang
  * @create 2018-09-24 15:34
  *
- * Ê¹ÓÃConditionalÌõ¼ş×¢²á×é¼ş
+ * ä½¿ç”¨Conditionalæ¡ä»¶æ³¨å†Œç»„ä»¶
  *
- * µ±²Ù×÷ÏµÍ³ÎªwindowsÊ±£¬×¢²áperson001£¬µ±²Ù×÷ÏµÍ³¸÷Î»linuxÊ±£¬×¢²áperson002×é¼ş
+ * å½“æ“ä½œç³»ç»Ÿä¸ºwindowsæ—¶ï¼Œæ³¨å†Œperson001ï¼Œå½“æ“ä½œç³»ç»Ÿå„ä½linuxæ—¶ï¼Œæ³¨å†Œperson002ç»„ä»¶
  */
 
 
-@Conditional(WindowsCondition.class) //Ìõ¼ş×¢²áÒ²¿ÉÒÔ·Åµ½ÀàÉÏÃæ£¬±íÊ¾Âú×ãÌõ¼şÊ±£¬ÏÂÃæµÄ¶ÔÏó²Å»á±»×¢²á½øÈİÆ÷ÖĞ
+@Conditional(WindowsCondition.class) //æ¡ä»¶æ³¨å†Œä¹Ÿå¯ä»¥æ”¾åˆ°ç±»ä¸Šé¢ï¼Œè¡¨ç¤ºæ»¡è¶³æ¡ä»¶æ—¶ï¼Œä¸‹é¢çš„å¯¹è±¡æ‰ä¼šè¢«æ³¨å†Œè¿›å®¹å™¨ä¸­
 @Configuration
 public class ConditionalConfig {
 

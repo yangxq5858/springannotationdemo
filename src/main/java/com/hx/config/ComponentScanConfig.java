@@ -9,23 +9,23 @@ import org.springframework.stereotype.Service;
  * @create 2018-09-24 12:03
  */
 
-//@ComponentScan //¶Ô@Controller @Repository @Service @Component ¶¼»áÉ¨Ãè³öÀ´
+//@ComponentScan //å¯¹@Controller @Repository @Service @Component éƒ½ä¼šæ‰«æå‡ºæ¥
 @ComponentScan(value = "com.hx",
 //        excludeFilters = {
-//        //±íÊ¾¹ıÂË¹æÔòÎª£ºÅÅ³ıÀàĞÍÎª×¢½âÀàĞÍµÄ£¬Àà = ControllerµÄ
+//        //è¡¨ç¤ºè¿‡æ»¤è§„åˆ™ä¸ºï¼šæ’é™¤ç±»å‹ä¸ºæ³¨è§£ç±»å‹çš„ï¼Œç±» = Controllerçš„
 //        @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = {Controller.class})
 //},
-        //±íÊ¾ Ö»°üº¬µÄÀàĞÍ
+        //è¡¨ç¤º åªåŒ…å«çš„ç±»å‹
         includeFilters = {
-                //±íÊ¾¹ıÂË¹æÔòÎª£ºÀàĞÍÎª×¢½âÀàĞÍµÄ£¬Àà = ControllerµÄ
+                //è¡¨ç¤ºè¿‡æ»¤è§„åˆ™ä¸ºï¼šç±»å‹ä¸ºæ³¨è§£ç±»å‹çš„ï¼Œç±» = Controllerçš„
                 @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = {Service.class}),
-                //±íÊ¾¹ıÂËÀàĞÍÎª Ö¸¶¨µÄÀà
+                //è¡¨ç¤ºè¿‡æ»¤ç±»å‹ä¸º æŒ‡å®šçš„ç±»
                 @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {com.hx.com.hx.controller.BookController.class}),
-                //°´×Ô¶¨Òå¹æÔò ¹ıÂË
+                //æŒ‰è‡ªå®šä¹‰è§„åˆ™ è¿‡æ»¤
                 @ComponentScan.Filter(type= FilterType.CUSTOM,classes = {MyFilterTypeImp.class})
 
         },
-        useDefaultFilters = false //Õâ¸ö²ÎÊı£¬Ä¬ÈÏÎªtrue£¬±íÊ¾È«²¿É¨Ãè£¬ÆôÓÃÖ»°üº¬Ê±£¬Òª¹Ø±Õ´Ë²ÎÊı²ÅÉúĞ§
+        useDefaultFilters = false //è¿™ä¸ªå‚æ•°ï¼Œé»˜è®¤ä¸ºtrueï¼Œè¡¨ç¤ºå…¨éƒ¨æ‰«æï¼Œå¯ç”¨åªåŒ…å«æ—¶ï¼Œè¦å…³é—­æ­¤å‚æ•°æ‰ç”Ÿæ•ˆ
 )
 public class ComponentScanConfig {
 }

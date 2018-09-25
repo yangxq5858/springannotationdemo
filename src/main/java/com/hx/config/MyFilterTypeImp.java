@@ -19,20 +19,20 @@ public class MyFilterTypeImp implements TypeFilter {
 
     /**
      *
-     * @param metadataReader ±íÊ¾µ±Ç°ÕıÔÚ¶ÁÈ¡µÄÀàĞÅÏ¢
-     * @param metadataReaderFactory ¿ÉÒÔ¶ÁÈ¡µ½ÆäËûÀàĞÅÏ¢µÄ¹¤³§
+     * @param metadataReader è¡¨ç¤ºå½“å‰æ­£åœ¨è¯»å–çš„ç±»ä¿¡æ¯
+     * @param metadataReaderFactory å¯ä»¥è¯»å–åˆ°å…¶ä»–ç±»ä¿¡æ¯çš„å·¥å‚
      * @return
      * @throws IOException
      */
     public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactory) throws IOException {
-        //»ñÈ¡µ±Ç°ÀàµÄ×¢½âĞÅÏ¢
+        //è·å–å½“å‰ç±»çš„æ³¨è§£ä¿¡æ¯
         AnnotationMetadata annotationMetadata = metadataReader.getAnnotationMetadata();
-        //»ñÈ¡µ±Ç°ÀàµÄÀàĞÅÏ¢
+        //è·å–å½“å‰ç±»çš„ç±»ä¿¡æ¯
         ClassMetadata classMetadata = metadataReader.getClassMetadata();
-        //»ñÈ¡µ±Ç°ÀàµÄ×ÊÔ´ĞÅÏ¢£¨±ÈÈçÀàµÄpath£©
+        //è·å–å½“å‰ç±»çš„èµ„æºä¿¡æ¯ï¼ˆæ¯”å¦‚ç±»çš„pathï¼‰
         Resource resource = metadataReader.getResource();
 
-        //ÕâÀïÊ¹ÓÃµ±Ç°ÀàµÄÀàĞÅÏ¢À´´¦Àí
+        //è¿™é‡Œä½¿ç”¨å½“å‰ç±»çš„ç±»ä¿¡æ¯æ¥å¤„ç†
         String className = classMetadata.getClassName();
         if (className.contains("er")){
             return true;

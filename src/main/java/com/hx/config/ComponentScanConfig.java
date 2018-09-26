@@ -1,5 +1,6 @@
 package com.hx.config;
 
+import com.hx.controller.BookController;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ import org.springframework.stereotype.Service;
                 //表示过滤规则为：类型为注解类型的，类 = Controller的
                 @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = {Service.class}),
                 //表示过滤类型为 指定的类
-                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {com.hx.controller.BookController.class}),
+                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {BookController.class}),
                 //按自定义规则 过滤
                 @ComponentScan.Filter(type= FilterType.CUSTOM,classes = {MyFilterTypeImp.class})
 

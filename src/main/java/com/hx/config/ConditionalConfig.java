@@ -1,8 +1,7 @@
 package com.hx.config;
 
-import com.hx.bean.Person;
-import com.hx.condition.LinuxCondition;
 import com.hx.condition.WindowsCondition;
+import com.hx.bean.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;

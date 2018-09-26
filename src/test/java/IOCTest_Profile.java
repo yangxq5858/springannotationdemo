@@ -1,11 +1,6 @@
-import com.hx.config.AutoWiredConfig;
 import com.hx.config.ProfileConfig;
-import com.hx.service.BookService;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Profile;
-
-import javax.swing.plaf.synth.Region;
 
 /**
  * @author yxqiang

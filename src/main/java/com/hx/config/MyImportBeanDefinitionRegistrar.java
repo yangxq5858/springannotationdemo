@@ -4,7 +4,6 @@ import com.hx.bean.Red;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
-import org.springframework.context.annotation.Scope;
 import org.springframework.core.type.AnnotationMetadata;
 
 /**

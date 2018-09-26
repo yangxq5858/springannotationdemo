@@ -1,7 +1,7 @@
 package com.hx.config;
 
-import com.hx.Repository.BookDao;
 import com.hx.bean.Car;
+import com.hx.Repository.BookDao;
 import com.hx.bean.Color;
 import org.springframework.context.annotation.*;
 

@@ -5,7 +5,6 @@ import com.hx.config.ImportComponentConfig;
 import com.hx.config.MainConfig;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.core.env.SystemEnvironmentPropertySource;
 
 /**
  * @author yxqiang

@@ -1,13 +1,10 @@
-import com.hx.Repository.BookDao;
 import com.hx.bean.Boss;
 import com.hx.bean.Car;
 import com.hx.bean.Color;
 import com.hx.config.AutoWiredConfig;
-import com.hx.config.PropertyAssignValueConfig;
 import com.hx.service.BookService;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.core.env.ConfigurableEnvironment;
 
 /**
  * @author yxqiang

@@ -22,7 +22,7 @@ public class LogAspects {
     public void pointCut(){};
 
 
-    //如果不想public int com.hx.AOP.MulCalcuator.*(..)  第一个* 表示所有的方法，括号后的两个.. 表示，所有的参数
+    //如果不想public int MulCalcuator.*(..)  第一个* 表示所有的方法，括号后的两个.. 表示，所有的参数
     @Before("pointCut()")
     public void logStart(JoinPoint joinPoint){
         Object[] args = joinPoint.getArgs();

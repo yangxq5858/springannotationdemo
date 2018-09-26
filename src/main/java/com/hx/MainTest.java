@@ -1,11 +1,5 @@
 package com.hx;
 
-import com.hx.bean.Person;
-import com.hx.config.MainConfig;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 /**
  * @author yxqiang
  * @create 2018-09-23 21:10

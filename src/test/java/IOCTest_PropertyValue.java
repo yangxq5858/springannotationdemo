@@ -1,4 +1,3 @@
-import com.hx.config.BeanLifeCycleConfig;
 import com.hx.config.PropertyAssignValueConfig;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

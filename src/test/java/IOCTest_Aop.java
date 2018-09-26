@@ -1,6 +1,5 @@
 import com.hx.AOP.MulCalcuator;
 import com.hx.config.AopConfig;
-import com.hx.config.ProfileConfig;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

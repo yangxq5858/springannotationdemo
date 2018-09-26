@@ -3,8 +3,6 @@ package com.hx.config;
 import com.hx.Repository.BookDao;
 import com.hx.bean.Car;
 import com.hx.bean.Color;
-import com.hx.controller.BookController;
-import com.hx.service.BookService;
 import org.springframework.context.annotation.*;
 
 /**
@@ -20,13 +18,11 @@ import org.springframework.context.annotation.*;
  *    3）使用 @Qualifier("bookDao") 注解，明确指定是哪一个Bean，用于自动装配进来
  *    4）@Autowired(required = false) //required = false 表示能装配上，就装配，否则为空时，要报错
  *    5）@Primary，不用@Qualifier，在Bean上设置，表示查找到多对象时，指定为优先级最高的Bean
- *
  */
 
 @Configuration
 @ComponentScan({"com.hx.controller","com.hx.service","com.hx.Repository","com.hx.bean"})
 //@Import(value = {BookController.class, BookService.class, BookDao.class})
-
 public class AutoWiredConfig {
 
 
